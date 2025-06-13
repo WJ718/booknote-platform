@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>사용자 설정</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>⚙️ <%= user.nick%> 님의 정보 설정</h1>
+  </header>
+
+  <main class="setting-section">
+    <section class="setting-box">
+      <h2>닉네임 변경</h2>
+      <form action="/user/change-nick" method="POST">
+        <input type="text" name="nick" placeholder="새 닉네임" required>
+        <button type="submit">변경</button>
+      </form>
+    </section>
+
+    <section class="setting-box">
+      <h2>비밀번호 변경</h2>
+      <form action="/user/change-password" method="POST">
+        <input type="password" name="currentPassword" placeholder="현재 비밀번호" required>
+        <input type="password" name="newPassword" placeholder="새 비밀번호" required>
+        <button type="submit">변경</button>
+      </form>
+    </section>
+
+    <section class="setting-box">
+      <h2>내가 쓴 글</h2>
+      <a href="/user/my-posts"><button>📝 확인하기</button></a>
+    </section>
+  </main>
+</body>
+</html>

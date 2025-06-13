@@ -1,0 +1,162 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fffdf5;
+  color: #444;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  background-color: #fff0c1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin: 0;
+  color: #d17e00;
+}
+
+.welcome-box {
+  margin-top: 10px;
+}
+
+.welcome-box form {
+  display: inline-block;
+  margin: 5px;
+}
+
+.upload-btn {
+  margin-top: 10px;
+  background-color: #ffd580;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.upload-form {
+  max-width: 600px;
+  margin: auto;
+  background: #fff9e6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.upload-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="file"],
+.upload-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.post-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.post-card {
+  background-color: #fff7e0;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nickname {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.book-info h3 {
+  margin: 0;
+  color: #c06000;
+}
+
+.post-content img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #999;
+}
+
+/* setting.ejs */
+
+.setting-section {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fffbe0;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.setting-box {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff7d6;
+  border-radius: 10px;
+}
+
+.setting-box h2 {
+  margin-bottom: 12px;
+  color: #d17e00;
+}
+
+.setting-box form input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+
+.setting-box button {
+  padding: 8px 16px;
+  background-color: #ffd580;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/*  수정, 삭제 관련 */
+
+.post-actions {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.edit-btn {
+  background-color: #ffedb2;
+  color: #333;
+}
+
+.delete-btn {
+  background-color: #ffc4c4;
+  color: #900;
+}

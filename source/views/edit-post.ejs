@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>도서록 수정하기</title>
+  <link rel="stylesheet" href="/styles/edit-post.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>📘 도서록 수정하기</h2>
+
+    <form action="/post/edit/<%= post.id %>" method="POST">
+      <label>제목</label>
+      <input type="text" name="title" value="<%= post.Book.title %>" required />
+
+      <label>저자</label>
+      <input type="text" name="author" value="<%= post.Book.author %>" required />
+
+      <label>출판사</label>
+      <input type="text" name="publisher" value="<%= post.Book.publisher %>" required />
+
+      <label>내용</label>
+      <textarea name="content" rows="6" required><%= post.content %></textarea>
+
+      <button type="submit">📌 수정 완료</button>
+    </form>
+
+    <a href="/" class="back-link">홈으로 돌아가기</a>
+  </div>
+</body>
+</html>

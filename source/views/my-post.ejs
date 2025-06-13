@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>내가 쓴 도서록</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>📝 내가 작성한 도서 감상문</h1>
+    <div class="welcome-box">
+      <% if (user) { %>
+        <p><strong><%= user.nick %></strong> 님의 게시글 목록입니다.</p>
+        <a href="/"><button class="upload-btn">🏠 메인으로 돌아가기</button></a>
+      <% } %>
+    </div>
+  </header>
+
+  <main class="post-section">
+    <% if (posts && posts.length > 0) { %>
+      <% posts.forEach(post => { %>
+        <% if (post.User && post.User.id === user.id) { %> <!-- 작성자 본인인지 확인 -->
+          <div class="post-card">
+                <div class="book-info">
+                    <% if (post.Book) { %>
+                    <h3><%= post.Book.title %></h3>
+                    <p><%= post.Book.author %> | <%= post.Book.publisher %></p>
+                    <% } else { %>
+                    <h3>책 정보 없음</h3>
+                    <% } %>
+                    <p class="nickname">작성자: <strong><%= post.User.nick %></strong></p>
+                </div>
+
+                <div class="post-content">
+                    <% if (post.img) { %>
+                    <img src="/uploads/<%= post.img %>" alt="도서 이미지">
+                    <% } %>
+                    <p><%= post.content %></p>
+                </div>
+
+                
+                <div class="post-actions">
+                    <a href="/post/edit/<%= post.id %>" class="edit-btn">✏️ 수정</a>
+                    <form action="/post/delete/<%= post.id %>" method="POST" style="display:inline;">
+                    <button type="submit" class="delete-btn">🗑️ 삭제</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+      <% }) %>
+    <% } else { %>
+      <p class="empty-msg">작성한 게시글이 없습니다.</p>
+    <% } %>
+  </main>
+</body>
+</html>
