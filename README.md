@@ -47,6 +47,6 @@
   <img src="./images/my-posts.png"/>
 
 ### 개발자
-- 윤원준 (서버 / 전체 기능 기획 및 구현)
-GitHub: [@WJ718](https://github.com/WJ718)
-Email: wjyoun6926@gmail.com
+- 윤원준 (서버 / 전체 기능 기획 및 구현)<br>
+**GitHub**: [@WJ718](https://github.com/WJ718)<br>
+**Email**: wjyoun6926@gmail.com
