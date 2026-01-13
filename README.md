@@ -14,13 +14,13 @@
 ![multer](./imgaes/multer.png)
 - 서버 실행 시 업로드 디렉토리를 자동 생성
 
-![change-password](./images/change-passwork.png)
+![change-password](./images/change-password.png)
 - 사용자가 입력한 기존 비밀번호를 bcrypt로 검증해 본인 여부를 확인
 - 새 비밀번호는 평문 저장 없이 해시 처리하여 다시 저장
 
 ![post](./images/post.png)
 - 책 정보는 Book 테이블에 분리 저장
-- 게시글은 외래키로 참조하도록 설계해 데이터 중복을 방지
+- 게시글은 외래키로 참조하도록 설계해 데이터 중복 방지
 
 ### 주요 기능
 | 기능 | 설명 |
