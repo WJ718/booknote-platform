@@ -11,7 +11,7 @@
 <img src="./images/ER.png"/>
 
 ### 주요 코드
-![multer](./imgaes/multer.png)
+![multer](./images/multer.png)
 - 서버 실행 시 업로드 디렉토리를 자동 생성
 
 ![change-password](./images/change-password.png)
